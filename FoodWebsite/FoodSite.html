@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FOOD SITE</title>
+	<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
+	
+*{
+		margin: auto;
+		padding: 0;
+		box-sizing: border-box;
+         font-family: "Poppins" , sans-serif;
+
+	}
+	
+	.banner{
+		position: relative;
+		width: 100%;
+		height: 100vh;
+		display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url(bg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 100px;
+    }
+
+    .banner .content {
+    	max-width: 900px;
+    	text-align: center;
+    }
+    .banner .content h2{
+    	text-align: center;
+    	font-size: 5em;
+    	color: white;
+    	font-weight: 500px;
+
+    }
+    .banner .content p{
+    	font-size: 1em;
+    	color: white;
+    	font-weight: 300px;
+		font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+		font-size: 17px;
+    	
+	
+
+    }
+    .btn{
+    	font-size: 1em;
+    	color: white;
+    	background-color: #ff0157;
+    	display: inline-block;
+    	margin-top: 20px;
+    	padding: 10px  30px;
+    	letter-spacing: 2px;
+    	text-transform: uppercase;
+    	text-decoration: none;
+    	text-align: center;
+
+    }
+    .btn:hover{
+    	letter-spacing: 6px;
+    	color: white;
+		
+    transition: 0.8s all;
+    }
+    body{
+		min-height: 1000px;
+	}
+
+    .nav{
+    	
+   background-color: #0000; 
+    	font-size: 12px;
+    	z-index: 9999;
+    	border-radius: 0;
+    	letter-spacing: 4px;
+    	line-height: 1.89759;
+    	 padding-right: 10px;
+    	padding-left: 10px;
+    	margin-bottom: 0;
+    	
+    }
+    .nav li a {
+   text-decoration: none;
+  color: #fff !important;
+  font-weight: 300;
+
+}
+.nav li a:hover{
+  color: #ff0157 ! important;
+    letter-spacing: 5px;
+    transition: 0.8s all;
+
+}
+.about{
+	padding: 80px;
+	margin-top: 0;
+	
+}
+.about .row{
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.about .row .col50{
+	position: relative;
+	width: 48%;
+}
+.titletext{
+	font-size: 3em;
+	color: black;
+	font-weight: 300 black;
+}
+.titletext span {
+	font-size: 1.5em;
+	color: #ff0157;
+	font-weight: 700;
+}
+.para{
+	font-size: 1.1em;
+    color: black;
+    font-family: 'Poppins' , sans-serif;
+    font-weight: 300;
+    align-items: center; 
+
+}
+
+.about .row .col50 .imm{
+	position: relative;
+	width: 100%;
+	height: 10%;
+
+}
+.about .row .col50 .imm img {
+	position: relative;
+	width: 110%;
+	height: 120%;
+	top: 0;
+	left: 0;
+	object-fit: cover;
+	box-shadow: 0px 15px 50px rgba(0,0,0,0.1);
+}
+
+.title{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	font-style: italic;
+
+}
+.menu .content{
+	display: flex;
+	justify-content: center;
+	flex-direction: row-reverse;
+	align-items: center;
+	flex-wrap: wrap;
+	margin-top: 10px;
+}
+.menu .content .box{
+	width: 340px;
+	margin: 20px;
+	margin-top: 30px;
+	border: 15px solid #fff;
+	box-shadow: 0 5px 35px rgba(0, 0, 0, 0.08);
+}
+.menu .content .box .imgBx {
+	position: relative;
+	width: 100%;
+	height: 350px;
+}
+.menu .content .box .imgBx img{
+	position: relative;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+}
+.menu .content .box .text{
+	padding: 15px 0px 5px;
+}
+.menu .content .box .text h3{
+	font-weight: 400;
+	color: #111;
+
+}
+
+.expert .content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	flex-direction: row;
+	text-align: center;
+	font-style: italic;
+	margin-top: 10px;
+}
+.expert .content .box{
+	width: 250px;
+	height: 100%;
+	margin-top: 30px;
+	margin: 20px;
+	border: 15px solid white;
+	box-shadow: 0px 5px 35px rgba(0,0,0,0.08);
+}
+.expert .content .box .imgBx{
+	position: relative;
+	height: 100%;
+	width: 100%;
+
+}
+.expert .content .box .imgBx img{
+	position: relative;
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.expert .content .box .text{
+	padding: 15px 0px 5px;
+}
+.expert .content .box .text h3{
+	font-weight: 400;
+	color: #111;
+
+}
+
+.testimonials{
+	background-image: url(bg2.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+.white .titletext{
+	color: white;
+}
+.para1{
+	font-size: 1.1em;
+    color: white;
+    font-family: 'Poppins' , sans-serif;
+    font-weight: 300;
+    align-items: center; 
+
+}
+.testimonials .content{
+	display: flex;
+	justify-content:center;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+    margin-top: 50px;
+}
+.testimonials .content .box{
+	width: 300px;
+	margin:30px;
+	margin-top: 10px;
+	padding: 30px;
+	background-color: white;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10%;
+
+}
+.testimonials .content .box .imgBx {
+	position: relative;
+	width: 80px;
+	height: 80px;
+	margin-bottom: 20px;
+	border-radius: 50%;
+	overflow: hidden;
+	border: 5px solid gray;
+	box-shadow: 0 5px 35px gray;
+}
+.testimonials .content .box .imgBx img{
+	position: relative;
+	top: 0;
+	left:0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.testimonials .content .box .text{
+	text-align: center;
+}
+.testimonials .content .box .text p{
+ color: #666;
+ font-style: italic;
+
+}
+.testimonials .content .box .text h3{
+ color: #ff0157;
+ margin-top: 20px;
+ font-size: 1.5em;
+ font-weight: 800;
+ font-style: italic;
+
+}
+.contact{
+	background-image: url(bg3.jpg);
+	background-size: cover;
+
+}
+.contactbox{
+	max-width: 500px;
+    padding: 75px 50px;
+    margin-left: 100px;
+	box-shadow: 0px 15px 50px rgba(0,0,0,0.1);
+	margin-top: 50px;
+}
+.contact .contactbox h3{
+	font-weight: 600;
+	font-size: 1.8em;
+	margin-bottom: 40px;
+	color: #ff0157;
+}
+.contact .contactbox .inputbox{
+	position: relative;
+	margin-bottom: 20px;
+	width: 100%;
+}
+.contact .contactbox .inputbox input,
+.contact .contactbox .inputbox textarea{
+	width: 100%;
+	padding: 10px;
+	border: 1px solid black;
+	color: black;
+	font-weight: 300;
+	font-size: 16px;
+	outline: none;
+	resize: none;
+}
+.contact .contactbox .inputbox input[type="submit"]{
+	font-size: 1em;
+	background-color: #ff0157;
+	color: white;
+	display: inline-block;
+	text-transform: uppercase;
+	text-decoration: none;
+	transition: 0.5s;
+	max-width: 100px;
+	letter-spacing: 2px;
+	font-weight: 500;
+	border: none;
+	cursor: pointer;
+}
+.copyright{
+	border-top: 1px solid rgba(0,0,0,0.1);
+	text-align: center;
+	padding:8px 80px;
+}
+.copyright p{
+	color: #333;
+}
+.copyright a{
+	color: #ff0157;
+	font-weight: 500;
+	text-decoration: none;
+	padding: 0px 3px 0px 3px; }
+
+header .sticky{
+		background-color: white;
+		padding:10px 25px;
+		box-shadow: 0px 5px 20px rgba(0,0,0,0.5);
+	}
+	header .sticky .nav li a {
+   text-decoration: none;
+  color: black !important;
+  font-weight: 300;
+
+}
+header .sticky .nav li a:hover{
+  color: #ff0157 ! important;
+    letter-spacing: 5px;
+    transition: 0.8s all;
+
+}
+</style>
+<body>
+	<header>
+	<nav class="nav navbar-inverse navbar-fixed-top" id="header">
+		<ul class="nav navbar-nav navbar-left">
+		 <li><a href="#home">HOME</a></li>
+        
+		</ul>
+		<ul class="nav navbar-nav navbar-right">
+			 <li><a href="#about">ABOUT</a></li>
+        <li ><a href="#menu">MENU</a></li>
+        <li><a href="#expert">EXPERT</a></li>
+        <li><a href="#testimonials">TESTIMONIALS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+			
+		</ul>
+	</nav> </header>
+	<div class="banner">
+<div class="content">
+	<h2>HEALTHY APPETITE</h2> <br>
+	<P>I am vegetarian and I prefer healthy choices, enjoying food full of goodness and fresh ingredients; I like to eat foods that I know are doing me good and looking after my body and mind, so my blog includes a variety of recipes, including vegetarian, vegan, dairy free, sugar free, gluten free, fat free, super healthy, ...</P>
+	<a href="#" class="btn">Our Menu</a>
+</div>
+</div>
+<div class="about" id="about">
+	<div class="row">
+		<div class="col50 abc">
+			<h2 class="titletext"><span>A</span>bout Us</h2>
+			<p class="para">I am vegetarian and I prefer healthy choices, enjoying food full of goodness and fresh ingredients; I like to eat foods that I know are doing me good and looking after my body and mind, so my blog includes a variety of recipes, including vegetarian, vegan, dairy free, sugar free, gluten free, fat free, super healthy, ...
+			I am vegetarian and I prefer healthy choices, enjoying food full of goodness and fresh ingredients; I like to eat foods that I know are doing me good and looking after my body and mind, so my blog includes a variety of recipes, including vegetarian, vegan, dairy free, sugar free, gluten free, fat free, super healthy
+		    I am vegetarian and I prefer healthy choices, enjoying food full of goodness and fresh ingredients; I like to eat foods that I know are doing me good and looking after my body and mind, so my blog includes a variety of recipes, including vegetarian, vegan, dairy free, sugar free, gluten free, fat free, super healthy</p>
+		</div>
+		<div class="col50">
+			<div class="imm">
+			<img src="pizza.jpg"> </div>
+
+		</div>
+	</div>
+</div>
+
+
+<div class="menu" id="menu">
+	<div class="title">
+           <h2 class="titletext">Our <span>M</span>enu</h2>
+			<p class="para">I am vegetarian and I prefer healthy choices, enjoying food full of goodness and fresh </p>
+		</div>
+
+<div class="content">
+<div class="box">
+ <div class="imgBx">
+		<img src="menu1.jpg">
+	</div>
+<div class="text">
+	<h3>Special Salads</h3>
+</div>
+  </div>
+	
+
+<div class="box">
+ <div class="imgBx">
+		<img src="menu2.jpg">
+	</div>
+<div class="text">
+	<h3>Special Soups</h3>
+</div>
+  </div>
+
+  <div class="box">
+ <div class="imgBx">
+		<img src="menu3.jpg">
+	</div>
+<div class="text">
+	<h3>Special Pasta</h3>
+</div>
+  </div>
+
+<div class="box">
+ <div class="imgBx">
+		<img src="menu4.jpg">
+	</div>
+<div class="text">
+	<h3>Special Salads</h3>
+</div>
+  </div>
+
+
+  <div class="box">
+ <div class="imgBx">
+		<img src="menu5.jpg">
+	</div>
+<div class="text">
+	<h3>Special Soups</h3>
+</div>
+  </div>
+
+  <div class="box">
+ <div class="imgBx">
+		<img src="menu6.jpg">
+	</div>
+<div class="text">
+	<h3>Special Pasta</h3>
+</div>
+  </div>
+  
+  <div class="title">
+  	<a href="#" class="btn" style="margin-bottom:10px"
+	>GO UP</a> 
+  </div>
+
+  </div>
+</div>
+
+
+
+
+<div class="expert" id="expert">
+	<div class="title">
+           <h2 class="titletext">Our Kitchen <span>E</span>xperts</h2>
+			<p class="para">I am vegetarian and I prefer healthy choices, enjoying food full of goodness and fresh </p>
+		</div>
+
+<div class="content">
+<div class="box">
+ <div class="imgBx">
+		<img src="expert1.jpg">
+	</div>
+<div class="text">
+	<h3>Stay Healthy!</h3>
+</div>
+  </div>
+	
+
+<div class="box">
+ <div class="imgBx">
+		<img src="expert2.jpg">
+	</div>
+<div class="text">
+	<h3>Stay Calm!</h3>
+</div>
+  </div>
+
+  <div class="box">
+ <div class="imgBx">
+		<img src="expert3.jpg">
+	</div>
+<div class="text">
+	<h3>Stay Hidrated!</h3>
+</div>
+  </div>
+
+<div class="box">
+ <div class="imgBx">
+		<img src="expert4.jpg">
+	</div>
+<div class="text">
+	<h3>Stay Smart!
+	</h3>
+</div>
+  </div>
+
+  </div></div>
+
+
+  <div class="testimonials" id="testimonials">
+	<div class=" white title">
+           <h2 class="titletext">They <span>S</span>aid About Us</h2>
+			<p class="para1">I am vegetarian and I prefer healthy choices, enjoying food full of goodness and fresh </p>
+		</div>
+
+<div class="content">
+	<div class="box">
+		<div class="imgBx">
+			<img src="testi1.jpg">
+		</div>
+		<div class="text">
+		<p>
+		    I am vegetarian and I prefer healthy choices, enjoying food full of goodness and fresh ingredients; I like to eat foods that I know are doing me good and looking after my body and mind, so my blog includes a variety of recipes, including vegetarian, vegan, dairy free, sugar free, gluten free, fat free, super healthy</p>
+		<h3>Someone Said</h3>
+	</div> </div>
+	
+<div class="box">
+		<div class="imgBx">
+			<img src="testi2.jpg">
+		</div>
+		<div class="text">
+		<p >I am vegetarian and I prefer healthy choices, enjoying food full of goodness and fresh ingredients; I like to eat foods that I know are doing me good and looking after my body and mind, so my blog includes a variety of recipes, including vegetarian, vegan, dairy free, sugar free, gluten free, fat free, super healthy</p>
+		<h3>Someone Said</h3> </div>
+	</div>
+	
+<div class="box">
+		<div class="imgBx">
+			<img src="testi3.jpg">
+		</div>
+		<div class="text">
+		<p> I am vegetarian and I prefer healthy choices, enjoying food full of goodness and fresh ingredients; I like to eat foods that I know are doing me good and looking after my body and mind, so my blog includes a variety of recipes, including vegetarian, vegan, dairy free, sugar free, gluten free, fat free, super healthy</p>
+		<h3>Someone Said</h3> </div>
+	</div>
+
+</div>
+
+</div>
+
+ <div class="contact" id="contact">
+	<div class=" title">
+           <h2 class="titletext">Fill to<span>C</span>ontact with Us</h2>
+			<p class="para">Contact us by letting us know about our services.</div>
+<div class="contactbox">
+	<h3>Send Message</h3>
+	<div class="inputbox">
+		<input type="text" name="name" placeholder="Name">
+	</div>
+	<div class="inputbox">
+		<input type="text" name="email" placeholder="Email">
+	</div><div class="inputbox">
+		<textarea placeholder="Message"></textarea> 
+	</div>
+	<div class="inputbox">
+		<input type="submit" value="Send">
+	</div>
+</div>
+</div>
+<div class="copyright">
+	<p>Copyright 2021<a href="#">FoodSite</a>All rights reserved.</p>
+</div>
+<script>
+
+	window.addEventListener("scroll", function(){
+		const head = document.querySelector('header');
+		header.classList.toggle("sticky", window.scrollY > 0);
+
+
+	});
+</script>
+</body>
+</html>
