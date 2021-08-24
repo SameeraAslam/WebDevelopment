@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+    	body{
+   background-color:#589Ed9;
+	font-family: Open sans;
+}
+#container{
+	width:300px ;
+    height: 1000px;
+    margin: 100px auto;
+    margin-top: 250px;
+    text-align: center;
+}
+h1{
+	color: white;
+	font-size: 32px;
+}
+
+#loginform .containerFeilds{
+	background-color: white;
+	border-radius: 10px;
+}
+#loginform .containerFeilds input{
+	width: 100%;
+	padding: 0px;
+	margin: 0px;
+	padding-top: 18px;
+	padding-bottom: 18px;
+	outline:none;
+	text-indent: 20px;
+	border-radius: 10px;
+	font-size: 18px;
+	border:none;
+}
+ #loginform input[type="password"] {
+    border-top: 1px solid #ccc;
+    border-radius: 0px;
+    -webkit-border-bottom-left-radius: 6px;
+    -webkit-border-bottom-right-radius: 6px;
+    -moz-border-radius-bottomright: 6px;
+    -moz-border-radius-bottomright: 6px;
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+}
+
+    #loginform input[type="submit"]{
+
+    font-family: open sans;
+    background-color:#0B6AB4;
+    font-size: 22px;
+    width:100%;
+    font-weight: bold;
+    color:white;
+    display: block;
+    border-radius: 8px;
+    padding: 10px 0px;
+    margin-top: 12px;
+    border:none; }
+
+   #loginform input[type="submit"]:hover{
+   	background-color: rgb(9, 9, 175);
+    cursor: pointer;
+     }	
+
+#footer a
+{
+color: white;
+font-size: 19px;
+text-decoration: none;
+font-weight: bold;
+}
+
+
+    </style>
+</head>
+<body>
+<div id="container">
+	<div id="header">
+ <div class="logo">  <i class="fa fa-weibo" aria-hidden="true"></i></div>
+			<h1> Welcome.</h1> </div>
+			<div id="loginform">
+				<div class="containerFeilds">
+					<form action="first.php" method="post">
+					<input type="text" placeholder="Email Address" id="" name="email">
+					<input type="password" placeholder="Password" id="" name="password">
+				</div>
+				<input type="submit" value="login">
+			</div></form>
+			<div id="footer"> <p> <a href="">Sign up</a> for a new account </p>
+			</div>
+				
+      </div>
+	</div>
+</div>
+</body>
+</html>
