@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>BOOTSTRAPPING!</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ 
+  
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script>
+
+$(document).ready(function(){
+
+  $("#text1, #text2").focus(function(){
+  	$(this).css("background-color","green")
+  	$(this).css("color","white")
+ 
+});
+$("#text1,#text2").blur(function(){
+	$(this).css("background-color","#339966")
+	
+});
+
+$("textarea").focus(function(){
+	$(this).css("background-color","green")
+	$(this).css("color","white")
+});
+$("textarea").blur(function(){
+	$(this).css("background-color","#339966")
+		
+});
+
+$("#sam").click(function(){
+    $("#div1").fadeToggle("1000");
+    $("#div2").fadeToggle("2000");
+    $("#div3").fadeToggle("3000");
+    $("#div4").fadeToggle("4000");
+    $("#div5").fadeToggle("5000");
+    $("#div6").fadeToggle("1000");
+    $("#div7").fadeToggle("2000");
+    $("#div8").fadeToggle("3000");
+    $("#div9").fadeToggle("4000");
+    $("#div10").fadeToggle("5000");
+    $("#div11").fadeToggle("1000");
+    $("#div12").fadeToggle("2000");
+  });
+
+
+
+$(".demo11").click(function(){
+	$(".cont").slideToggle("slow");  
+	
+
+
+});
+
+
+$(".jumbotron1").mouseenter(function(){
+	$("#jumbotron2").show(6000);
+	$("#jumbotron3").show(5000);
+	$("#jumbotron4").show(4000);
+	$("#jumbotron5").show(3000);
+	$("#jumbotron6").show(2000);
+	$("#jumbotron7").show(1000);
+	$("footer").slideDown(10000);
+
+});
+
+
+
+
+
+});
+  
+ 
+  </script>
+</head>
+<style type="text/css">
+	.jumbotron{
+	 background-image: url('bg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed; 
+		text-align: center;
+		color: white;
+		padding: 100px 25px;
+		margin-top: 0px;
+	}
+	.bg-grey{
+		background-color: grey;
+	
+
+		
+	}
+	.container-fluid{
+		padding-bottom: 70px;
+		padding-top: 70px;
+		padding-right: 90px;
+		padding-left: 90px;
+	}
+	@media screen and (max-width: 768px) {
+  .col-sm-4 {
+    text-align: center;
+    margin: 25px 0;
+  }
+}
+  .logo{
+  	font-size: 200px;
+  	color:green;
+  }
+  .logo-small{
+  	font-size: 50px;
+  	color: green;
+  }
+  .bg-white{
+  	font-size: 15px;
+
+  }
+  .navbar{
+  margin-bottom: 0;
+   background-image: url('bg.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed; 
+ 
+  z-index: 9999;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 4px;
+  border-radius: 0;
+}
+ .navbar li a, .navbar .navbar-brand {
+  color: #fff !important;
+}
+.navbar .navbar-nav li a:hover{
+	color: green !important;
+  background-color: white !important;
+
+}
+.dropdown-menu{
+	background-color:green;
+    
+}
+.item h4{
+	color: white;
+	font-size: 20px;
+	line-height: 1.375em;
+	font-weight: 400;
+	font-style: italic;
+	margin:70px;
+
+}
+.carousel-indicators li {
+  border-color: green;
+}
+
+.carousel-indicators li.active {
+  background-color:green;
+}
+.carousel-control.right,.carousel-control.left{
+	color: white;
+	font-weight: bold;
+	font-style: italic;
+
+}
+#myCarousel{
+	margin-top: 30px;
+}
+#divv{
+	display: flex;
+    align-items: center;
+	justify-content: space-around;
+	flex-wrap: wrap;
+	margin-top: 20px;
+	
+
+}
+#div1,#div2,#div3,#div4,#div5,#div6,#div7,#div8,#div9,#div10,#div11,#div12{
+	 width:100px;
+	 height:100px;
+	 background-color:green;
+	 color: white;
+	 font-size: 13px;
+	 border-radius:70%;
+	 text-align: center;
+	 padding:15px;
+	 border:1px solid black;
+	 margin:10px;
+	 display: none;
+}
+.cont{
+	display: none;
+	text-align: center;
+}
+.jumbotron1{
+	    height: 350px;
+	    width: 75em;
+	     background-color: white;
+	     display: flex;
+	     flex-direction:row;
+	     justify-content: space-around;
+	     animation-name: jumbotron1;
+         animation-duration:2s;
+         animation-iteration-count: infinite;
+}
+@keyframes jumbotron1{
+	0%{
+		background-color:#dcedc8;
+	}
+	12.5%{
+		background-color: #aed581;
+	}
+	25%{
+		background-color:#8bc34a;
+	}
+	37.5%{
+		background-color: #689f38;
+	}
+	50%{
+		background-color: #558b2f;
+	}
+	62.5%{
+		background-color: #33691e;
+	}
+	75%{
+		background-color:#ccff90;
+	}
+	87.5%{
+		background-color:#b2ff59;
+	}
+    100%{
+		background-color: #64dd17;
+
+	}
+}
+
+#jumbotron2,#jumbotron3,#jumbotron4,#jumbotron5,#jumbotron6,#jumbotron7{
+  height: 200px;
+  width: 260px;
+  margin: 10px;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 100;
+  background-color: black;
+  border-radius: 10%;
+  display: none;
+
+}
+
+</style>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+
+<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header dropdown">
+			<a class="navbar-brand">HOME</a>
+          
+
+
+
+
+		</div>
+			<ul class="nav navbar-nav navbar-right ">
+        <li><a href="#about">ABOUT</a></li>
+        <li ><a href="#services">SERVICES</a></li>
+        <li><a href="#portfolio">PORTFOLIO</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+        <li><a href="#pricing">PRICING</a></li>
+
+      </ul>
+   <ul class="nav navbar-nav navbar-left">
+				<li><a href="#bootstrap1.html"><span class="glyphicon glyphicon-user"></span> Sign up</a></li>
+				<li><a href=""><span class="glyphicon glyphicon-log-in"></span> Log in</a></li>
+		
+      </ul>
+	  </div> 
+	</nav>
+
+
+
+	<div class="jumbotron ">
+		<h1>LEGION SERVICES</h1>
+		<h4>~Your one stop services.</h4>
+		<form class="form-inline">
+			<div class="input-group">
+				<input type="text" class="form-control" placeholder="Search" size="50"  >
+				<div class="input-group-btn">
+				<button class="btn btn-default" ><span class="glyphicon glyphicon-search"></span>
+					Search</button>
+			</div>
+			</div>
+		</form>
+	</div>
+
+
+
+
+
+
+<div class="container-fluid" id="about">
+	<div class="row">
+	<div class="col-sm-8 text-center">
+	<h1>About Our Company</h1>
+	<h4>The company basically allows multiple services providing companies an open platform to be accessed by clients in one interfacethat meets the basic needs of the clients with examples being Electricians, Mechanics, Technician, Plumbers, Carpenters and Interior designing to know more about company click the button.</h4>
+	<button class="btn btn-danger" data-toggle="collapse" data-target="#demo">click here.</button>
+	<p id="demo" class="collapse" style="font-size: 20px; font-weight:100; font-style: normal;">
+There are many household problems which occur in daily routine like: faults in electronic appliances (Washing machines, Generators, Microwave Ovens, Sewing Machines, Water-Motors, etc), wooden/iron furniture (Doors, Cupboards, Cabinets, Windows, etc), plumbing (installation and repairing of water/gas flow pipes, bathtubs, sinks, toilets, etc). To tackle these routine problems either we have to carry our appliances to the mechanics and technicians or we have to find a suitable mechanic/technician who can come to our houses. Our company provides these all services, you just have to call us and tell us about faults and we will send best mechanic/technician for you at your houses as soon as possible.
+<img src="lgg.jpg">
+	</p> <br/>
+	<button id="sam" style="margin-top: 5px;"class="btn btn-default btn-lg">Global Aims <span class="	glyphicon glyphicon-globe"></span></button>
+	<div id="divv">
+<div id="div1">Labor jobs scarcity removal.</div>
+<div id="div2">Bringing technology to local community.</div>
+<div id="div3">Meets social needs of the clients.</div>
+<div id="div4">Provides 1 platform ease. </div>
+<div id="div5">Company collaborations.</div>
+<div id="div6">Accurately target audience.</div>
+<div id="div7">	Sustainable growth.</div>
+<div id="div8">Staying profitable. </div>
+<div id="div9">Productivity of people and resources.</div>
+<div id="div10">Excellent customer services.</div>
+<div id="div11">Staying ahead of the competition.</div>
+<div id="div12">Reaching the right customer.</div>
+	</div>
+</div>
+
+<div class="col-sm-4">
+	
+	<span class="glyphicon glyphicon-wrench logo"></span>
+	<div class="row demo11"><span class="glyphicon glyphicon-chevron-up"></span>
+	<!--<button id="demo1" style="margin-top: 5px;" class="btn btn-lg btn-default">Know more <span class="glyphicon glyphicon-remove-circle"></span> </button></div>
+	<div class="row">
+     <div class="contentt">
+	<img src="lggg.jpg" style="width: 150px; height: 150px;" style="margin-top: 10px;"></div>-->
+
+	<div class="cont"><img src="lggg.jpg" style="height: 200px; width: 200px; margin-top: 10px;"></div>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="container-fluid bg-grey">
+	<div class="row">
+		<div class="col-sm-8 text-center">
+	 <h2>Our Values</h2>
+  <h4><strong>MISSION:</strong> Our mission lorem ipsum..</h4>
+  <p><strong>VISION:</strong> Our vision Lorem ipsum..</p>
+</div>
+<div class="col-sm-4">
+	<span class="glyphicon glyphicon-globe logo">
+</div>
+</div>
+
+
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+	<ol class="carousel-indicators">
+	 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+		<li  data-target="#myCarousel2" data-slide-to="1"></li>
+		<li  data-target="#myCarousel3" data-slide-to="2"></li>
+	</ol>
+
+<div class="carousel-inner text-center">
+	<h2>What Our Clients say</h2>
+	<div class="item active">
+		<h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
+	</div>
+	<div class="item">
+	<h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
+	</div>
+	<div class="item">
+		<h4>"This company is the best. I am so happy with the result!"<br><span style="font-style:normal;">Michael Roe, Vice President, Comment Box</span></h4>
+	</div>
+</div>
+
+<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev" aria-hidden="true"><span class="glyphicon glyphicon-chevron-left">Previous</span></a>
+<a class="right carousel-control" href="#myCarousel" data-slide="next" aria-hidden="true"><span class="glyphicon glyphicon-chevron-right">Next</span></a>
+</div>
+</div>
+
+<div class="container-fluid text-center" id="services">
+	<H1>SERVICES</H1>
+	<h4>What we offer</h4>
+	<br />
+	<div class="row">
+		<div class="col-sm-4">
+			<span class="glyphicon glyphicon-off logo-small"></span>
+			<h3>POWER</h3>
+			<p>Our vision Lorem ipsum..</p>
+		</div><!--col-->
+		<div class="col-sm-4">
+			<span class="glyphicon glyphicon-heart logo-small"></span>
+			<h3>LOVE</h3>
+			<p>Our vision Lorem ipsum..</p>
+		</div><!--col-->
+		<div class="col-sm-4">
+			<span class="glyphicon glyphicon-lock logo-small"></span>
+			<h3>JOB DONE</h3>
+			<p>Our vision Lorem ipsum..</p>
+		</div><!--COL-->
+	</div><!--ROW-->
+<br />
+<div class="row">
+		<div class="col-sm-4">
+			<span class="glyphicon glyphicon-leaf logo-small"></span>
+			<h3>GREEN</h3>
+			<p>Our vision Lorem ipsum..</p>
+		</div><!--col-->
+		<div class="col-sm-4">
+			<span class="glyphicon glyphicon-certificate logo-small"></span>
+			<h3>CERTIFICATE</h3>
+			<p>Our vision Lorem ipsum..</p>
+		</div><!--col-->
+		<div class="col-sm-4">
+			<span class="glyphicon glyphicon-wrench logo-small"></span>
+			<h3>HARDWORK</h3>
+			<p>Our vision Lorem ipsum..</p>
+		</div><!--COL-->
+	</div><!--ROW-->
+</div>
+
+
+<div class="container-fluid " style="background-color: grey" id="portfolio">
+
+	<div class="row text-center">
+		<h2>Portfolio</h2>
+	<h4> What we Have created </h4>
+	<br />
+		<div class="col-sm-4">
+			<div class="thumbnail">
+				<img class="img-responsive img-rounded" src="london.jpg" alt="london" style="height:300px; width:400px">
+				<p> <strong>London</strong></p>
+				<hp>We builtin london</p>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="thumbnail">
+				<img class="img-responsive img-rounded" src="london1.jpg" alt="london" style="height:300px; width:400px">
+				<p> <strong>Paris</strong></p>
+				<hp>We built in Paris</p>
+			</div>
+		</div>
+		<div class="col-sm-4">
+			<div class="thumbnail">
+				<img class="img-responsive img-rounded" src="london2.jpg" alt="london" style="height:300px; width:400px">
+				<p> <strong>New York</strong></p>
+				<hp>We built in NewYork</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+<div class="container-fluid" id="contact">
+	
+<h1 class="text-center" style="font-size: 70px;">CONTACT</h1><br />
+
+<div class="row">
+	
+	<div class="col-sm-5 text-center">
+		<p>Contact us in order to connect with us.</p> <br />
+		<p><span class="glyphicon glyphicon-map-marker">Pakistan,Hyd</span></p><br />
+		<p><span class="glyphicon glyphicon-phone">+00568772581</span></p><br />
+		<p><span class="glyphicon glyphicon-envelope">my@email.com</span></p><br />
+	</div>
+	<div class="col-sm-7">
+		<div class="row">
+			<div class="col-sm-4 form-group">
+	     <input type="text" placeholder="Name" class="form-control" id="text1" size="10"> </div>
+	     <div class="col-sm-4 form-group">
+	     <input type="email" placeholder="Email" class="form-control" id="text2" size="10">
+			</div>
+		</div>
+<div class="row">
+	<div class="col-sm-8 form-group">
+		<textarea rows=5 class="form-control" placeholder="Comments"></textarea>
+	</div>
+</div>
+<div class="row">
+	<div class="col-sm-12 form-group">
+		<button class="btn btn-default" type="submit">Send</button>
+	</div>
+</div>
+	</div>
+	
+</div>
+<div class="container-fluid" id="pricing">
+	<div class="jumbotron jumbotron1">
+	
+<div id="jumbotron2" class="thumbnail"><img src="productt.jpg" class="img-responsive img-rounded" style="height: 85px; width: 85px; margin:10px auto;">We offer the best products
+</div>
+<div id="jumbotron3" class="thumbnail"><img src="price.png" class="img-responsive img-rounded" style="height: 85px; width: 85px; margin:10px auto;">Reasonable prices </div>
+<div id="jumbotron4" class="thumbnail"><img src="channel.jpg" class="img-responsive img-rounded" style="height: 85px; width: 85px; margin:10px auto;">Wide distribution Channels</div>
+<div id="jumbotron5" class="thumbnail"><img src="sale.jpg" class="img-responsive img-rounded" style="height: 85px; width: 85px; margin:10px auto;">Offers sales</div>
+<div id="jumbotron6" class="thumbnail"><img src="manag.jpg" class="img-responsive img-rounded" style="height: 85px; width: 85px; margin:10px auto;">Management Relationships</div>
+<div id="jumbotron7" class="thumbnail"><img src="strag.jpg" class="img-responsive img-rounded" style="height: 85px; width: 85px; margin:10px auto;">Marketing Strategies</div>
+	</div>
+	<footer style="font-size: 18px; display: none;">Our application’s beta version has already been prepared with a proper team comprising of few workers divided into teams for development, management, feedback, and so on. A list of customers and services has been provided their approval for the beta testing. The final version will be released after the 2-month beta testing and making changes in the program based on the feedback.
+		<p>LEGION SERVICE sallow multiple services providing companies and private workshop owners an open platform to be accessed by clients in one interface that meets the basic needs of the clients with examples being Electricians, Mechanics, Technicians, Plumbers, Carpenters, Interior designing etc. Employee training and equipment maintenance and new equipment purchases will be provided from company.
+The following are the key features of our application.
+•	Contact the labor directly through the application.
+•	Equipment will be provided by the company.
+•	Customer will not be charged until the problem is not resolved
+</p>
+<p>Since the application is not limited up-to certain problems and there might appear some common home appliances issues like dealing with customer wrecked motor, damaged power surge, inefficient refrigerator, wobbling washing machine, no power at on outlet etc. Thus, the price varies according to the problem. Customer can use any convenient payment method for transferring cash (through Online Banking applications or cash on delivery).</p>
+<p>Company will offer 30% off on a first call to encourage users for the maximum expansion of marketing. Company will get the application advertised through different platforms like social media, YouTube, blogging etc.
+Furthermore, Company will promote the application by identified sponsors through print ads, television, direct mails, web pages, and emails to put focus on communicating directly to customers. We will spread awareness about our application through FaceBook marketing, messages, calls to aware our customers about the services and make them avail our services.
+<p>The prices are carefully managed so that it is affordable enough to expand its distribution to end users. To get our application out of the company we have involved some companies, individuals who would act as franchisor, distributor that would ultimately help us push the services we have come up with to our customers.
+We will use transport services like motorbike, Suzuki to get our labor at your doorsteps to resolve your issue. If the problem is major and requires large equipment then strong heavy vehicles will be used. We have a warehouse of tools and equipment and coverage area is within the city up till now.
+</p>
+<p>Series of standard questions had been prepared to ask to our potential customers to get the understanding about what is the need we should come up with, thus coming up with LEGION SERVICES answers all the question of consumers and it communicates a solution in terms of consumers’ daily life problems by connecting the customers’ needs with its efficient features. In case any objection arise later, company has prepared a series of responses for addressing them before closing the sale and to maintain the relationship with customer, company will make sure the services must function to customers’ satisfaction to stay in touch with customers to have a better relationship .</p>
+</p></footer>
+</div>
+</div>
+
+<img src="map.jpg" style="width:100%; height:100%">
+
+
+
+
+
+
+<div class="container-fluid bg-grey text-center">
+  <h1 style="color: white; font-weight: bold;">TEAM MANAGEMENT</h1> <br />
+  <p style="color: white; font-size: 16px; font-style: italic;">"Every member of our management team has done all basic and required qualifications according to their fields which are later discussed in their individual profiles"</p>
+  <br>
+  	
+  <div class="row">
+    <div class="col-sm-4">
+    	<div class="thumbnail">
+      <p><strong>Rose</strong></p><br>
+      <img src="a.jpg" alt="Sameera" class="img-responsive img-circle" style="height:400px; width:400px">
+      <p><strong>Rose is the President of the company </strong> <a href="#" >click here to know more about her</a></p>
+    </div>
+</div>
+    <div class="col-sm-4">
+    	<div class="thumbnail">
+      <p><strong>Daura</strong></p><br>
+      <img src="ab.jpg" alt="Aliza" class="img-responsive img-circle" style="height:400px; width:400px">
+       <p><strong>Duara is the Marketing Manager of the company </strong> <a href="#" >click here to know more about her</a></p>
+    </div></div>
+    <div class="col-sm-4">
+    	<div class="thumbnail">
+      <p><strong>Jennifer</strong></p><br>
+      <img src="abc.jpg" alt="Fatima" class="img-responsive img-circle" style="height:400px; width:400px">
+       <p><strong>Jennifer is the Account Manager is the  of the company </strong> <a href="#" >click here to know more about her</a></p>
+    </div></div>
+  </div>
+  <div class="row">
+  	<div class="col-sm-2"></div>
+  	<div class="col-sm-4">  
+  		<div class="thumbnail">
+  		 <p><strong>Alessia</strong></p><br>
+      <img src="abcd.jpg" alt="Rohat" class="img-responsive img-circle" style="height:400px; width:400px">
+       <p><strong>Alessia is the Operations Manager of the company </strong> <a href="#" >click here to know more about her</a></p>
+  	</div></div>
+  	<div class="col-sm-4">
+  		<div class="thumbnail">
+ <p><strong>Carla</strong></p><br>
+      <img src="abcde.jpg" alt="alwaz" class="img-responsive img-circle" style="height:400px; width:400px">
+       <p><strong>Carla is the HR Manager of the company
+        </strong> <a href="#" >click here to know more about her</a></p>
+  </div> </div>
+</div>
+
+
+
+
+
+
+<div class="page-header"></div>
+
+<div class="container-fluid bg-grey text-center" style="color: green; font-size: 20px;">
+	<p><span class="glyphicon glyphicon-chevron-up"></span></p>
+	<a href="#myPage" style="color: green"> Click here to move to top. </a>
+	
+</div>
+
+
+
+</div>
+	
+
+
+</div>
+
+
+
+
+</body>
+</html>
